@@ -5,7 +5,9 @@ html {
   font-family: "Arial", sans-serif;
 }
 
-
+body {
+  max-width: 2000px;
+}
 
 
 .desktop-header {
@@ -66,7 +68,6 @@ section>.content {
 .information .content .main-content,
 .thesis .content .main-content {
   width: 60%;
-  margin-right: 1.5rem;
 }
 
 .banner .content .supporting-content,
@@ -75,6 +76,7 @@ section>.content {
   display: flex;
   flex-direction: column;
   width: 40%;
+  border: 1px dashed red;
 }
 
 section .content .main-content img,
@@ -96,16 +98,56 @@ q, cite {
 
 .supporting-content-container {
     display: flex;
-    width: 100%;
+    /* width: 100%; */
 }
 
-.supporting-content-container>img {
+.supporting-content-container img {
   width: 35%;
+  height: auto;
+  margin-left: 1.5rem;
 }
 
-.supporting-content-container>.content {
+.supporting-content-container .content {
   width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.supporting-content-container>* {
+  margin-left: 1.5rem;
+}
+
+
+.courses .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0;
+}
+
+.courses-gallery {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-right: 3.5rem;
+  margin-left: 3.5rem;
+  border: 1px dashed red;
+}
+
+.courses-category {
+  width: 30%;
+  margin: 1rem;
+  /* border: 1px dashed gray; */
+}
+
+.courses-category img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.course-offerings-preface {
+  text-transform: uppercase;
 }
