@@ -1,0 +1,50 @@
+/* Universal styles */
+
+html {
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+}
+
+
+
+
+.desktop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  margin-left: 1.5rem;
+}
+
+.logo img {
+  height: 2rem;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.logo-text.colmar {
+
+}
+
+.logo-text.academy {
+  color: lightgrey;
+}
+
+.desktop-navigation {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+.desktop-navigation a {
+  font-size: 1rem;
+  text-decoration: none;
+  margin-left: 1rem;
+}
