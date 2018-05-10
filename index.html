@@ -32,7 +32,7 @@
   <!-- Page Content -->
 
     <!-- Section One: Banner Section -->
-    <section class="banner">
+    <section id="banner">
       <div class="content">
         <div class="main-content">
           <img src="./images/banner.jpg" alt="Banner Image">
@@ -46,7 +46,7 @@
     </section>
 
     <!-- Section Two: Information -->
-    <section class="information">
+    <section id="information">
       <div class="content">
         <div class="main-content">
           <img src="./images/information-main.jpg" alt="Image">
@@ -83,10 +83,10 @@
       </div>
     </section>
 
-    <!-- Section Three: Courses -->
-    <section class="courses">
+    <!-- Section Three: Courses/Course Offerings -->
+    <section id="courses" class="desktop-tablet-only">
+      <h1 class="section-title">Start Learning</h1>
       <div class="content">
-        <h1 class="section-title">Start Learning</h1>
         <div class="courses-gallery">
           <div class="courses-category">
             <img src="./images/course-software.jpg" alt="Image">
@@ -129,18 +129,18 @@
     </section>
 
     <!-- Section Four: Thesis Projects -->
-    <section class="thesis">
+    <section id="thesis">
       <h1 class="section-title">Thesis Exhibit</h1>
       <div class="content">
         <div class="main-content">
-          <!-- <video src="./videos/.DS_Store" autoplay poster="posterimage.jpg"> </video> -->
+          <video src="./videos/.DS_Store" controls poster="posterimage.jpg"> </video>
           <h1 class="headline">Reimagine urban</h1>
           <p class="text">"Curabitur vitae libero in ipsum portitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etima eget magna laoreet, efficitur dolor consequate, tristique ligula."</p>
         </div>
         <div class="supporting-content">
           <div class="supporting-content-container">
             <img src="./images/thesis-fisma.jpg" alt="Image">
-            <div class="content">
+            <div class="content-under-video">
               <h3>Fisma: Design and Prototype</h3>
               <p>Designer showcase of new prototype product</p>
             </div>
@@ -159,7 +159,7 @@
     <!-- Footer Section -->
     <footer>
       <small>&copy; 2016 Colmar Academy. All rights reserved.</small>
-      <div class="terms-of-useage-links desktop-only">
+      <div class="terms-of-useage-links desktop-tablet-only">
         <a href="#">Terms</a>
         <a href="#">Privacy</a>
       </div>

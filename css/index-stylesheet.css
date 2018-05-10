@@ -9,6 +9,7 @@ body {
   max-width: 2000px;
 }
 
+/* CSS for Header (Top banner & Navigation)  */
 
 .desktop-header {
   display: flex;
@@ -52,79 +53,105 @@ body {
   margin-left: 1rem;
 }
 
+/* Page Content divided into four "Sections": .banner, .information, .courses, & .thesis */
+  /* Top level organization: Center page content vertically */
 section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
   max-width: 100%;
   border: 1px dashed green;
 }
+  /* Second order organization: .banner, .information, & .thesis sections have horizontal flex containers w/ .main-content on the left and .supporting-content on the right; .courses contains an horizontal flexbox "image-gallery" of .courses-category "containers" (w/ flex-wrap enabled), adjust size of "containers" as required; FOR MOBLILE LAYOUT, these flexboxes change to flex-direction: column */
 
-section>.content {
+#banner>.content,
+#information>.content,
+#thesis>.content {
   display: flex;
   padding-left: 1.5rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
-.banner .content .main-content,
-.information .content .main-content,
-.thesis .content .main-content {
+.section-title {
+  margin-bottom: 2rem;
+}
+
+.main-content {
   width: 60%;
+  border: 1px dashed purple;
 }
 
-.banner .content .supporting-content,
-.information .content .supporting-content,
-.thesis .content .supporting-content, {
+.supporting-content {
+  width: 40%;
+  margin-left: 1.5rem;
   display: flex;
   flex-direction: column;
-  width: 40%;
   border: 1px dashed red;
 }
 
-section .content .main-content img,
-section .content .supporting-content img {
+#banner .supporting-content {
+  justify-content: center;
+}
+
+.supporting-content-container {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0 1rem 1rem;
+}
+
+  /* Second order organization: #courses section is has a flex container w/ individual boxes describing course-curriculum/categories -- mobile view switches to vertical column with div boxes  */
+#courses .content {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-left: 0;
+}
+
+/* .supporting-content-container img {
+  width: 35%;
+  height: auto;
+  dis;
+} */
+/*
+#information .image-container {
+  width: 35%;
+  overflow: hidden;
+}
+*/
+#information .supporting-content-container>.content,
+#thesis .supporting-content-container>.content {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.main-content img {
   width: 100%;
   height: auto;
+  display: block;
   overflow: hidden;
 }
 
-.banner .button {
+.supporting-content img {
+  width: 35%;
+  height: auto;
+  display: block;
+  overflow: hidden;
+}
+
+#banner .button {
   color: white;
   background-color: black;
   padding: .5rem 3rem;
 }
 
+    /* formating of quote in .banner section */
 q, cite {
   display: block;
 }
 
-.supporting-content-container {
-    display: flex;
-    /* width: 100%; */
-}
-
-.supporting-content-container img {
-  width: 35%;
-  height: auto;
-  margin-left: 1.5rem;
-}
-
-.supporting-content-container .content {
-  width: 65%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.supporting-content-container>* {
-  margin-left: 1.5rem;
-}
-
-
-.courses .content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 0;
-}
 
 .courses-gallery {
   display: flex;
@@ -136,18 +163,66 @@ q, cite {
   border: 1px dashed red;
 }
 
-.courses-category {
-  width: 30%;
-  margin: 1rem;
-  /* border: 1px dashed gray; */
-}
-
 .courses-category img {
   width: 100%;
   height: auto;
   overflow: hidden;
 }
 
+@media only screen and (min-width: 1093px) {
+  .courses-category {
+    width: 30%;
+    margin: 1rem;
+  }
+}
+
+  /* This media query resizes the .courses-category containers when they transition from a 2row x 3 column grid to a 3row x 2 column grid */
+@media only screen and (max-width: 1092px) {
+  .courses-category {
+    width: 45%;
+    margin: 1rem;
+}
+
 .course-offerings-preface {
   text-transform: uppercase;
 }
+
+
+
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 1.5rem;
+}
+
+/* Adjust sizes of video player to webpage size here */
+
+  video {
+    width: 800px;
+  }
+
+  @media only screen and (max-width: 1400px) {
+    video {
+      width: 700px;
+    }
+  }
+
+  @media only screen and (max-width: 1240px) {
+    video {
+      width: 600px;
+    }
+  }
+
+  @media only screen and (max-width: 1080px) {
+    video {
+      width: 500px;
+    }
+  }
+
+  @media only screen and (max-width: 890px) {
+    video {
+      width: 400px;
+    }
+  }
