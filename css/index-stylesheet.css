@@ -3,6 +3,7 @@
 html {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
+  color: #444444;
 }
 
 body {
@@ -18,7 +19,11 @@ body {
 
 .headline,
 .section-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
+}
+
+.section-header {
+  font-size: 1.5rem;
 }
 
 a:link,
@@ -31,6 +36,10 @@ a:active {
 
 a:hover {
   text-decoration: underline;
+}
+
+p {
+  margin: 1rem 0;
 }
 
 /* CSS for Header (Top banner & Navigation)  */
@@ -61,11 +70,11 @@ a:hover {
 }
 
 .logo-text.colmar {
-
+ color: #0F0F0F;
 }
 
 .logo-text.academy {
-  color: lightgrey;
+  color: #A8A6A5;
 }
 
 .desktop-navigation {
@@ -115,21 +124,13 @@ section {
   border: 1px dashed red;
 }
 
+/* Light grey backgrounds in selectyed sections to break up layout */
+.background-accent {
+  background-color: #EEEEEE;
+}
 
-@media screen and (max-width: 790px) {
-  #banner>.content,
-  #information>.content,
-  #thesis>.content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 1.5rem;
-  }
-
-  .main-content,
-  .supporting-content {
-  width: 100%;
-  }
+.background-accent-override {
+  background-color: #FFFFFF;
 }
 
 #banner .supporting-content {
@@ -142,6 +143,10 @@ section {
   padding: 1rem 0 1rem 1rem;
 }
 
+#information .supporting-content {
+  justify-content: space-between;
+}
+
   /* Second order organization: #courses section is has a flex container w/ individual boxes describing course-curriculum/categories -- mobile view switches to vertical column with div boxes  */
 #courses .content {
 display: flex;
@@ -150,17 +155,7 @@ align-items: center;
 padding-left: 0;
 }
 
-/* .supporting-content-container img {
-  width: 35%;
-  height: auto;
-  dis;
-} */
-/*
-#information .image-container {
-  width: 35%;
-  overflow: hidden;
-}
-*/
+
 #information .supporting-content-container>.content,
 #thesis .supporting-content-container>.content {
   width: 65%;
@@ -193,7 +188,9 @@ padding-left: 0;
     /* formating of quote in .banner section */
 q, cite {
   display: block;
+  margin: 1.5rem 0;
 }
+
 
 
 .courses-gallery {
@@ -212,7 +209,7 @@ q, cite {
   overflow: hidden;
 }
 
-  /* Media queries to resize the .courses-category containers when they transition from a 2row x 3 column grid to a 3row x 2 column grid */
+  /* Media queries to resize the .courses-category containers when they transition from a 2row x 3 column grid to a 3row x 2 column grid, and to switch to mobile view/buttons at transition to 1 column */
   @media only screen and (min-width: 1093px) {
   .courses-category {
     width: 30%;
@@ -224,13 +221,51 @@ q, cite {
   .courses-category {
     width: 45%;
     margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 773px) {
+  courses-gallery.desktop-only {
+  display: none;
+  }
 }
 
 .course-offerings-preface {
   text-transform: uppercase;
 }
 
+/* Changes to layout at breakpoint for desktop to tablet layout conversion */
+@media screen and (min-width: 791px) {
+  .banner-image.tablet-and-mobile,
+  #courses.tablet-and-mobile {
+    display: none;
+  }
+}
 
+@media screen and (max-width: 790px) {
+  #banner>.content,
+  #information>.content,
+  #thesis>.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1.5rem;
+  }
+
+  .main-content,
+  .supporting-content {
+    width: 100%;
+  }
+
+  .supporting-content {
+    margin-left: 0;
+  }
+
+  .desktop-only,
+  .banner-image.desktop-only {
+    display: none;
+  }
+}
 
 
 /* Footer */
