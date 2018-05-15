@@ -2,11 +2,35 @@
 
 html {
   font-size: 16px;
-  font-family: "Arial", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
   max-width: 2000px;
+}
+
+.headline,
+.section-title,
+.section-header {
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+}
+
+.headline,
+.section-title {
+  font-size: 2rem;
+}
+
+a:link,
+a:visited,
+/* a:hover, */
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* CSS for Header (Top banner & Navigation)  */
@@ -32,6 +56,8 @@ body {
 .logo-text {
   font-size: 1.5rem;
   text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
 }
 
 .logo-text.colmar {
@@ -63,7 +89,7 @@ section {
   max-width: 100%;
   border: 1px dashed green;
 }
-  /* Second order organization: .banner, .information, & .thesis sections have horizontal flex containers w/ .main-content on the left and .supporting-content on the right; .courses contains an horizontal flexbox "image-gallery" of .courses-category "containers" (w/ flex-wrap enabled), adjust size of "containers" as required; FOR MOBLILE LAYOUT, these flexboxes change to flex-direction: column */
+  /* Second order organization: .banner, .information, & .thesis sections have horizontal flex containers w/ .main-content on the left and .supporting-content on the right; .courses contains an horizontal flexbox "image-gallery" of .courses-category "containers" (w/ flex-wrap enabled), adjust size of "containers" as required; FOR Tablet & Mobile Layout, these flexboxes change to flex-direction: column */
 
 #banner>.content,
 #information>.content,
@@ -87,6 +113,23 @@ section {
   display: flex;
   flex-direction: column;
   border: 1px dashed red;
+}
+
+
+@media screen and (max-width: 790px) {
+  #banner>.content,
+  #information>.content,
+  #thesis>.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1.5rem;
+  }
+
+  .main-content,
+  .supporting-content {
+  width: 100%;
+  }
 }
 
 #banner .supporting-content {
@@ -169,15 +212,15 @@ q, cite {
   overflow: hidden;
 }
 
-@media only screen and (min-width: 1093px) {
+  /* Media queries to resize the .courses-category containers when they transition from a 2row x 3 column grid to a 3row x 2 column grid */
+  @media only screen and (min-width: 1093px) {
   .courses-category {
     width: 30%;
     margin: 1rem;
   }
 }
 
-  /* This media query resizes the .courses-category containers when they transition from a 2row x 3 column grid to a 3row x 2 column grid */
-@media only screen and (max-width: 1092px) {
+  @media only screen and (max-width: 1092px) {
   .courses-category {
     width: 45%;
     margin: 1rem;
@@ -226,3 +269,23 @@ footer {
       width: 400px;
     }
   }
+
+/* Media queries to switch elements from desktop-veiw elements to mobile-view elements */
+
+@media only screen and (min-width: 701px) {
+  .mobile-header {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .desktop-header {
+    display: none;
+  }
+
+  .mobile-header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
