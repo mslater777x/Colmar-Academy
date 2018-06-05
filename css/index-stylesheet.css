@@ -48,7 +48,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px dashed red;
+  /* border: 1px dashed red;   -- For de-bugging */
 }
 
 .logo {
@@ -96,7 +96,7 @@ section {
   align-items: center;
   padding: 2rem 0;
   max-width: 100%;
-  border: 1px dashed green;
+  /*border: 1px dashed green;  -- For de-bugging */
 }
   /* Second order organization: .banner, .information, & .thesis sections have horizontal flex containers w/ .main-content on the left and .supporting-content on the right; .courses contains an horizontal flexbox "image-gallery" of .courses-category "containers" (w/ flex-wrap enabled), adjust size of "containers" as required; FOR Tablet & Mobile Layout, these flexboxes change to flex-direction: column */
 
@@ -113,7 +113,7 @@ section {
 
 .main-content {
   width: 60%;
-  border: 1px dashed purple;
+  /*border: 1px dashed purple;  -- For de-bugging */
 }
 
 .supporting-content {
@@ -121,7 +121,7 @@ section {
   margin-left: 1.5rem;
   display: flex;
   flex-direction: column;
-  border: 1px dashed red;
+  /*border: 1px dashed red;  -- For de-bugging */
 }
 
 /* Light grey backgrounds in selectyed sections to break up layout */
@@ -215,7 +215,7 @@ q, cite {
   flex-wrap: wrap;
   margin-right: 3.5rem;
   margin-left: 3.5rem;
-  border: 1px dashed red;
+  /*border: 1px dashed red;  -- For de-bugging */
 }
 
 .courses-category img {
@@ -295,7 +295,7 @@ q, cite {
 
   #courses .content {
     width: 90%;
-    border: 1px dashed purple;
+    /*border: 1px dashed purple;  -- For de-bugging */
   }
 
   #courses .button {
