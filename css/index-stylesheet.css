@@ -104,7 +104,7 @@ section {
 #information>.content,
 #thesis>.content {
   display: flex;
-  padding-left: 1.5rem;
+  margin-left: 1.5rem;
 }
 
 .section-title {
@@ -133,14 +133,25 @@ section {
   background-color: #FFFFFF;
 }
 
-#banner .supporting-content {
-  justify-content: center;
-}
-
 .supporting-content-container {
   display: flex;
   align-items: center;
   padding: 1rem 0 1rem 1rem;
+}
+
+#banner .supporting-content {
+  justify-content: center;
+}
+
+.headline {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#banner .sub-headline {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 
 #information .supporting-content {
@@ -161,7 +172,7 @@ padding-left: 0;
   width: 65%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   margin-left: 1rem;
 }
 
@@ -181,9 +192,14 @@ padding-left: 0;
 
 #banner .button {
   color: white;
-  background-color: black;
-  padding: .5rem 3rem;
+  background-color: #0F0F0F;
+  padding: .5rem 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
 }
+
 
     /* formating of quote in .banner section */
 q, cite {
@@ -197,7 +213,6 @@ q, cite {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-top: 2rem;
   margin-right: 3.5rem;
   margin-left: 3.5rem;
   border: 1px dashed red;
@@ -209,12 +224,20 @@ q, cite {
   overflow: hidden;
 }
 
+.courses-category>h3,
+.courses-category>p {
+  margin: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+
+
   /* Media queries to resize the .courses-category containers when they transition from a 2row x 3 column grid to a 3row x 2 column grid, and to switch to mobile view/buttons at transition to 1 column */
   @media only screen and (min-width: 1093px) {
   .courses-category {
     width: 30%;
     margin: 1rem;
   }
+
 }
 
   @media only screen and (max-width: 1092px) {
@@ -243,13 +266,22 @@ q, cite {
 }
 
 @media screen and (max-width: 790px) {
+  .desktop-only,
+  .banner-image.desktop-only {
+    display: none;
+  }
+
   #banner>.content,
-  #information>.content,
   #thesis>.content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  #information>.content {
+    margin-left: 0;
   }
 
   .main-content,
@@ -261,12 +293,50 @@ q, cite {
     margin-left: 0;
   }
 
-  .desktop-only,
-  .banner-image.desktop-only {
-    display: none;
+  #courses .content {
+    width: 90%;
+    border: 1px dashed purple;
+  }
+
+  #courses .button {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #EEEEEE;
+    padding: 1rem;
+    width: 100%;
+    margin: 0.5rem auto;
+
+  }
+
+  .section-title {
+    margin-bottom: 1rem;
   }
 }
 
+@media only screen and (max-width: 375px) {
+  .supporting-content-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 1rem;
+  }
+
+  .supporting-content-container img {
+    width: 100%;
+    max-height: 200px;
+  }
+
+  #information .supporting-content-container>.content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .supporting-content-container .content>* {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+}
 
 /* Footer */
 footer {
@@ -305,7 +375,33 @@ footer {
     }
   }
 
-/* Media queries to switch elements from desktop-veiw elements to mobile-view elements */
+  /* At the following screen sizes, the video now has no content to the right of it... re-size to the width of the viewport minus accomodations for margins and space to shrink to next breakpoint */
+
+  @media only screen and (max-width: 791px) {
+    video {
+      width: 690px;
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    video {
+      width: 350px;
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    video {
+      width: 300px;
+    }
+  }
+
+  @media only screen and (max-width: 300px) {
+    video {
+      width: 200px;
+    }
+  }
+
+/* Media queries to switch elements from desktop-veiw elements & layout to mobile-view elements & layout */
 
 @media only screen and (min-width: 701px) {
   .mobile-header {
@@ -322,5 +418,24 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 4rem;
   }
+
+  .desktop-tablet-only {
+    display: none;
+  }
+
+@media only screen and (min-width: 400px) {
+  .headline,
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-header,
+  .sub-headline {
+    font-size: 1.5rem;
+  }
+
+
+
 }

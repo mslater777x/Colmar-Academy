@@ -51,7 +51,7 @@
         </div>
         <div class="supporting-content">
             <h1 class="headline">Learn something new everyday</h1>
-            <h2 class="text">Lorem ipsum dolor sit amet, consectetur adipsicing elit.</h2>
+            <h2 class="text sub-headline">Lorem ipsum dolor sit amet, consectetur adipsicing elit.</h2>
             <a class="button" href="#"><h2>Start Here</h2></a>
         </div>
       </div>
@@ -60,7 +60,7 @@
     <!-- Section Two: Information -->
     <section id="information">
       <div class="content">
-        <div class="main-content desktop-only background-accent">
+        <div class="main-content desktop-only">
           <img src="./images/information-main.jpg" alt="Image">
           <h1 class="headline">It doesn't hurt to keep practicing</h1>
           <q class="text">"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequate ex. Etiam eget magna laoreet, efficitur dolor conswquate, tristique ligula."</q>
@@ -96,79 +96,95 @@
     </section>
 
     <!-- Section Three: Courses/Course Offerings -->
-    <section id="courses" class="background-accent">
+      <!-- Display for non-mobile devices -->
+    <section id="courses" class="desktop-only background-accent">
       <h1 class="section-title">Start Learning</h1>
       <div class="content">
-        <div class="courses-gallery desktop-only">
+        <div class="courses-gallery">
           <div class="courses-category background-accent-override">
             <img src="./images/course-software.jpg" alt="Image">
             <h3 class="section-header">Software engineering</h3>
-            <p class="course-offerings-preface">Courses</p>
+            <p class="course-offerings-preface"><a href="#">Courses</a></p>
             <p class="course-offerings">Web Development, Mobile Development, iOT, APIs</p>
           </div>
           <div class="courses-category background-accent-override">
             <img src="./images/course-computer-art.jpg" alt="Image">
             <h3 class="section-header">Computer Art</h3>
-            <p class="course-offerings-preface">Courses</p>
+            <p class="course-offerings-preface"><a href="#">Courses</a></p>
             <p class="course-offerings">Imaging &amp; Design, Web Design, Motion Graphics &amp; Visual Effects, Computer Animation</p>
           </div>
           <div class="courses-category background-accent-override">
             <img src="./images/course-design.jpg" alt="Image">
             <h3 class="section-header">Design</h3>
-            <p class="course-offerings-preface">Courses</p>
+            <p class="course-offerings-preface"><a href="#">Courses</a></p>
             <p class="course-offerings">User Experience Design, User Research, Visual Design</p>
           </div>
           <div class="courses-category background-accent-override">
             <img src="./images/course-data.jpg" alt="Image">
             <h3 class="section-header">Data</h3>
-            <p class="course-offerings-preface">Courses</p>
+            <p class="course-offerings-preface"><a href="#">Courses</a></p>
             <p class="course-offerings">Data Science, Big Data, SQL, Data Visualization</p>
           </div>
           <div class="courses-category background-accent-override">
             <img src="./images/course-business.jpg" alt="Image">
             <h3 class="section-header">Business</h3>
-            <p class="course-offerings-preface">Courses</p>
+            <p class="course-offerings-preface"><a href="#">Courses</a></p>
             <p class="course-offerings">Product Development, Business Development, Startup</p>
           </div>
           <div class="courses-category background-accent-override">
             <img src="./images/course-marketing.jpg" alt="Image">
             <h3 class="section-header">Marketing</h3>
-            <p class="course-offerings-preface">Courses</p>
+            <p class="course-offerings-preface"><a href="#">Courses</a></p>
             <p class="course-offerings">Analytics, Content Marketing, Mobile Marketing</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Section Four: Thesis Projects -->
-    <section id="thesis">
-      <h1 class="section-title">Thesis Exhibit</h1>
+
+      <!-- Display FOR tablet & mobile devices -->
+    <section id="courses" class="tablet-and-mobile background-accent-override">
+      <h1 class="section-title">Start Learning</h1>
       <div class="content">
-        <div class="main-content">
-          <video src="./videos/.DS_Store" controls poster="posterimage.jpg"> </video>
-          <div class="content-under-video">
-            <h1 class="headline">Reimagine urban</h1>
-            <p class="text">"Curabitur vitae libero in ipsum portitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etima eget magna laoreet, efficitur dolor consequate, tristique ligula."</p>
+        <h3 class="button"><a href="#">Software engineering</a></h3>
+        <h3 class="button"><a href="#">Computer Art</a></h3>
+        <h3 class="button"><a href="#">Design</a></h3>
+        <h3 class="button"><a href="#">Data</a></h3>
+        <h3 class="button"><a href="#">Business</a></h3>
+        <h3 class="button"><a href="#">Marketing</a></h3>
+      </div>
+    </section>
+
+  <!-- Section Four: Thesis Projects -->
+  <section id="thesis">
+    <h1 class="section-title">Thesis Exhibit</h1>
+    <div class="content">
+      <div class="main-content">
+        <video src="./videos/thesis.mp4" controls poster="posterimage.jpg"> </video>
+        <div class="content-under-video desktop-tablet-only">
+          <h1 class="headline">Reimagine urban</h1>
+          <p class="text">"Curabitur vitae libero in ipsum portitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etima eget magna laoreet, efficitur dolor consequate, tristique ligula."</p>
+        </div>
+      </div>
+      <div class="supporting-content desktop-only">
+        <div class="supporting-content-container background-accent">
+          <img src="./images/thesis-fisma.jpg" alt="Image">
+          <div class="content">
+            <h3 class="section-header">Fisma: Design and Prototype</h3>
+            <p>Designer showcase of new prototype product</p>
           </div>
         </div>
-        <div class="supporting-content desktop-only">
-          <div class="supporting-content-container background-accent">
-            <img src="./images/thesis-fisma.jpg" alt="Image">
-            <div class="content">
-              <h3 class="section-header">Fisma: Design and Prototype</h3>
-              <p>Designer showcase of new prototype product</p>
-            </div>
-          </div>
-          <div class="supporting-content-container">
-            <img src="./images/thesis-now-and-then.jpg" alt="Image">
-            <div class="content">
-              <h3 class="section-header">Now and then</h3>
-              <p>Research study about New York</p>
-            </div>
+        <div class="supporting-content-container">
+          <img src="./images/thesis-now-and-then.jpg" alt="Image">
+          <div class="content">
+            <h3 class="section-header">Now and then</h3>
+            <p>Research study about New York</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+
 
     <!-- Footer Section -->
     <footer>
